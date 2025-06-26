@@ -1,18 +1,12 @@
 ﻿using Asasy.Domain.Common.Helpers;
 using Asasy.Domain.Common.PathUrl;
 using Asasy.Domain.DTO.ChatDTO;
-using Asasy.Domain.Entities.Chat;
-using Asasy.Domain.Enums;
 using Asasy.Service.Api.Contract.Chat;
 using Asasy.Service.Api.Contract.Lang;
 using Asasy.Service.Api.Implementation.FilterValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Asasy.Controllers.Api
 {
@@ -33,6 +27,15 @@ namespace Asasy.Controllers.Api
             _langService = langService;
         }
 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
+        //دى هتجيب كل الشاتات الخاصه بشخص معين 
         //دى هتجيب كل الشاتات الخاصه بشخص معين 
         [HttpPost(ApiRoutes.Chat.ListUsersMyChat)]
         public async Task<IActionResult> ListUsersMyChat()
@@ -77,7 +80,7 @@ namespace Asasy.Controllers.Api
             string lang = _langService.Lang;
 
             List<ListMessageTwoUsersDto> ListMessages = await _chatServices.GetListMessageTwoUsersDto(userId, ChatId, pageNumber);
-            var AdObject = await _chatServices.ChatAdInfo(ChatId,lang);
+            var AdObject = await _chatServices.ChatAdInfo(ChatId, lang);
             var data = new GetAllMessagesDto
             {
                 ad = AdObject,
